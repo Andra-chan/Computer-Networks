@@ -1,0 +1,61 @@
+NIVELE DE PROTOCOALE:
+Web(nu e foarte palpabil):
+
+Aplicatie:
+HTTP si FTP se bazeaza pe TCP
+DNS se bazeaza pe UDP
+
+Transport:
+TCP - verifica daca s-a conectat, deconectat, primit etc
+UDP - nu face verificari in privinta transmisiei primite(e mai rapid decat TCP) - dumnezeu cu mila daca ajunge
+
+Retea/Internet:
+IP
+
+Data Link/Nivel legatura de date + Nivel Fizic:
+Adrese MAC/Hardware/Ethernet
+
+-------------------------------------------------------
+
+Mecanism de comunicare intre procese:
+ex. CTRL-C, CTRL-V, prin fisier, pipe, fifo, semafoare, memorie partajata, SOCKET-URI
+
+-----------------------------------------------------------------------
+La SO:
+proces 1
+
+f = open
+write(f)
+read(f)
+
+
+proces 2
+
+g = open
+read(g)
+write(g)
+
+----------------------------------------------------------------------------
+La sockets: send si recv
+
+Ce sunt sockets?
+Canal de comunicare bidirectional intre doua procese ce ruleaza pe sisteme conectate la internet.
+
+
+Client
+
+c = socket
+connect(c, -IP, -port)
+send(c)
+recv(c)
+close(c)
+
+Server
+
+s = socket
+bind(s, -port)
+listen(s)
+accept(s)
+recv(c)
+send(c)
+close(c)

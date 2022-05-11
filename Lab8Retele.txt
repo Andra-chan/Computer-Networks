@@ -1,0 +1,23 @@
+en				(enable)
+configure terminal              (conf t)
+interface FastEthernet 0/0      <nume interfata>
+no shutdown
+ip address 10.17.58.1 255.255.255.0         <ip> <nm>
+do wr mem
+
+
+
+exit - ma duc cu un meniu mai sus
+
+run-conf
+
+startup-conf
+
+write memory | run-conf >> startup-conf
+
+
+------------------------------------------------------------
+
+ip route <dest> <n-m> <next hop>
+wr mem
+sh ip route
